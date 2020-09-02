@@ -9,6 +9,7 @@ In order to get it running download and compile the following projects first
 You can modify the SampleUnitTest.pro in order to ajust INCLUDEPASTH and LIBS to point your local file locations.
 
 In order to test the code coverate you need to put the following line as arguments for the executable in QtCreator:
->> output.log && (%{sourceDir}/runCoverage.sh ./)
+
+\> output.log && (%{sourceDir}/runCoverage.sh ./)
 
 lcov needs to be installed before. Run "brew install lcov" to do that.
