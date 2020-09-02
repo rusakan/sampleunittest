@@ -20,19 +20,15 @@ double complexOperation(double param1, double param2)
 
 TEST(SampleUnitTest, sample)
 {
-    try {
-        double a = 3.9;
-        double b = 2.2;
-        Approvals::verify(complexOperation(a,b));
-    }  catch (const std::exception& e) {
-        FAIL() << e.what() << std::endl;
-    }
+    double a = 3.9;
+    double b = 2.2;
+    Approvals::verify(complexOperation(a,b));
 }
 
 TEST(SampleUnitTest, verifyAllCombinations)
 {
     std::vector<double> param1 = {2.0,1.1};
-    std::vector<double> param2 = {6.7,9.8,123.4};
+    std::vector<double> param2 = {2.0,6.7,9.8,123.4};
     CombinationApprovals::verifyAllCombinations([](double a, double b){return complexOperation(a,b);},param1,param2);
 }
 

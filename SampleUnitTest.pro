@@ -23,6 +23,11 @@ win32 {
     LIBS += ../../../ApprovalTests.cpp/ApprovalTests/out/ApprovalTests.lib
 }
 
+mac {
+    QMAKE_CXXFLAGS += --coverage
+    QMAKE_LFLAGS += --coverage
+}
+
 SOURCES += \
         main.cpp \
         tests.cpp
