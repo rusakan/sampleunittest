@@ -12,9 +12,16 @@ INCLUDEPATH += ../../../googletest/googlemock/include
 INCLUDEPATH += ../../../ApprovalTests.cpp
 INCLUDEPATH += ../../../ApprovalTests.cpp/ApprovalTests
 
-LIBS += ../../../googletest/install/lib/libgtest.a
-LIBS += ../../../googletest/install/lib/libgmock.a
-LIBS += ../../../ApprovalTests.cpp/ApprovalTests/out/libApprovalTests.a
+unix {
+    LIBS += ../../../googletest/install/lib/libgtest.a
+    LIBS += ../../../googletest/install/lib/libgmock.a
+    LIBS += ../../../ApprovalTests.cpp/ApprovalTests/out/libApprovalTests.a
+}
+win32 {
+    LIBS += ../../../googletest/install/lib/gtest.lib
+    LIBS += ../../../googletest/install/lib/gmock.lib
+    LIBS += ../../../ApprovalTests.cpp/ApprovalTests/out/ApprovalTests.lib
+}
 
 SOURCES += \
         main.cpp \
