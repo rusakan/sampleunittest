@@ -7,20 +7,20 @@ CONFIG -= app_bundle
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-INCLUDEPATH += ../../../googletest/googletest/include
-INCLUDEPATH += ../../../googletest/googlemock/include
-INCLUDEPATH += ../../../ApprovalTests.cpp
-INCLUDEPATH += ../../../ApprovalTests.cpp/ApprovalTests
+INCLUDEPATH += ../googletest/googletest/include
+INCLUDEPATH += ../googletest/googlemock/include
+INCLUDEPATH += ../ApprovalTests.cpp
+INCLUDEPATH += ../ApprovalTests.cpp/ApprovalTests
 
 unix {
-    LIBS += ../../../googletest/install/lib/libgtest.a
-    LIBS += ../../../googletest/install/lib/libgmock.a
-    LIBS += ../../../ApprovalTests.cpp/ApprovalTests/out/libApprovalTests.a
+    LIBS += ../googletest/install/lib/libgtest.a
+    LIBS += ../googletest/install/lib/libgmock.a
+    LIBS += ../ApprovalTests.cpp/ApprovalTests/out/libApprovalTests.a
 }
 win32 {
-    LIBS += ../../../googletest/install/lib/gtest.lib
-    LIBS += ../../../googletest/install/lib/gmock.lib
-    LIBS += ../../../ApprovalTests.cpp/ApprovalTests/out/ApprovalTests.lib
+    LIBS += ../googletest/install/lib/gtest.lib
+    LIBS += ../googletest/install/lib/gmock.lib
+    LIBS += ../ApprovalTests.cpp/ApprovalTests/out/ApprovalTests.lib
 }
 
 mac {
